@@ -39,6 +39,7 @@ All state names are stored as have standard abbreviations in AddressState column
 Data is only from USA,so the Country column only has US in it so do not generate query about any other countries.
 Company names in user questions are usually associated with ContractorName column, always use LIKE SQL statement since user may not use exact name. This data is specific to Country USA only.
 Valuation of project or questions about cost,money spent, estimated cost etc usually refers to DollarValue column.
+PermitType only has string values these are :  Energy Storage Systems , Solar Photovoltaic and Energy Storage Systems ,Solar Photovoltaic Systems . User may not refer to these exactly so use LIKE SQL statement.
 These columns have the following data types: 
 String type columns: PipelineProjectId, ContractorName, ModuleBrand, InverterBrand, EPCName, StorageBrand, TrackerSupplier, OfftakerName, PermitNumber, ProjectName, Business, City, Zip, AddressState, Country, PermitType, DisplayName, BalancingAuthority, Status, DevelopmentStage, InterconnectionAgreement, FeasibilityStudy, SystemImpactStatus, FacilityImpactStatus, EIANumber, FERCNumber, Contacts, SourceLink, ConstructionStatus, PlanningBoardApprovalStatus, Substation, Utility, Notes, Segment, InServiceProject, FinancingType 
 DateTime type columns: CreatedAt, ApplicationDate, IssueDate, UpdatedAt, InServiceDate, ConstructionStartDate, PlanningBoardApprovalDate, FeasibilityStudyDate, SystemImpactStatusDate, FacilityImpactStatusDate, InterconnectionAgreementStatusDate 
