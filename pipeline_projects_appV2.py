@@ -6,9 +6,13 @@ import csv
 ####################################
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-creds = st.secrets["google_creds"]
-gc = gspread.authorize(creds)
 
+creds_dict = st.secrets["google_creds"]
+
+# Convert to oauth2client credentials
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict) 
+
+gc = gspread.authorize(creds)
 ##################################
 # API key  
 openai.api_key = st.secrets["OPENAI_API_KEY"]
