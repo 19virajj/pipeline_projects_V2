@@ -79,6 +79,7 @@ Welcome to Ohm Pipeline Projects Viewer APP! You can ask about 'Pipeline Project
 - Location: City, state, and country of each project.
 - Technical Specs: Power and battery capacity.
 - Status and Stage: Current project status and development stage.
+- DB has has around 20000 rows and has projects that have a 'Created date' (Date it was added to db between) 7/2019 to 11/2021. Note that data is also not exhaustive for this timeline.
 
 Remember:
 
