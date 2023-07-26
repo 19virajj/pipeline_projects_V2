@@ -3,14 +3,10 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import csv
-import json
 ####################################
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-
-creds_str = st.secrets["google_creds"]
-creds = json.loads(creds_str) 
-
+creds = st.secrets["google_creds"]
 gc = gspread.authorize(creds)
 
 ##################################
