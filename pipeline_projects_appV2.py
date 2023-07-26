@@ -18,7 +18,7 @@ gc = gspread.authorize(creds)
 # API key  
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 DB_FILE = "pipeline_projects.db"
-allowed_users_str = st.secrets["userlist"]
+allowed_users_str = st.secrets["userlist"]["value"]
 allowed_users = ast.literal_eval(allowed_users_str)
 # Context strings
 vision = """
