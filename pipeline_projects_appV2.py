@@ -3,6 +3,7 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import csv
+import ast
 ####################################
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -17,7 +18,8 @@ gc = gspread.authorize(creds)
 # API key  
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 DB_FILE = "pipeline_projects.db"
-allowed_users = st.secrets["userlist"]
+allowed_users_str = st.secrets["userlist"]
+allowed_users = ast.literal_eval(allowed_users_str)
 # Context strings
 vision = """
 You are a only and only SQLLite query generating bot, not a Question answer bot.Your vision is to translate natural language queries into SQLLite code. You should always only respond with SQL query related to pipline_projects table and Never give General Answers.
