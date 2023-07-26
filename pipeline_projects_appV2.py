@@ -16,7 +16,8 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict)
 gc = gspread.authorize(creds)
 ##################################
 # API key  
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+api_key = st.secrets["OPENAI_API_KEY"]["value"]
+openai.api_key = api_key
 DB_FILE = "pipeline_projects.db"
 allowed_users_str = st.secrets["userlist"]["value"]
 allowed_users = ast.literal_eval(allowed_users_str)
